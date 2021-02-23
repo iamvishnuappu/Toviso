@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Title -->
+    <title>toviso | home</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Responsive CSS -->
+    <link href="css/responsive/responsive.css" rel="stylesheet">
+	
+	<style>
+
+.collapsible {
+    background-color: rgb(0,0,0);
+			background-color: rgba(0,0,0,0.9);
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover {
+   
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+		.overlay {
+			height: 100%;
+			width: 0%;
+			position: fixed;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			background-color: rgb(0,0,0);
+			background-color: rgba(0,0,0,0.9);
+			overflow-x: hidden;
+			transition: 0.5s;
+		}
+
+		.overlay-content {
+			position: relative;
+			top: 25%;
+			width: 100%;
+			text-align: center;
+			margin-top: 30px;
+		}
+
+		.overlay a {
+			padding: 8px;
+			text-decoration: none;
+			font-size: 36px;
+			color: #818181;
+			display: block;
+			transition: 0.3s;
+		}
+
+		.overlay a:hover, .overlay a:focus {
+			color: #f1f1f1;
+		}
+
+		.overlay .closebtn 
+		{
+			position: absolute;
+			top: 50px;
+			right: 45px;
+			font-size: 60px;
+		}
+
+		@media screen and (max-height: 450px) 
+		{
+		  .overlay a {font-size: 20px}
+		  .overlay .closebtn 
+		  {
+			font-size: 40px;
+			top: 15px;
+			right: 35px;
+		  }
+		}
+	</style>
+
+</head>
+
+<body>
+    <!-- Preloader -->
+	 <form class="index">
+    <div id="preloader">
+        <div class="caviar-load"></div>
+        <div class="preload-icons">
+            <img class="preload-1" src="img/core-img/preload-1.png" alt="">
+            <img class="preload-2" src="img/core-img/preload-2.png" alt="">
+            <img class="preload-3" src="img/core-img/preload-3.png" alt="">
+        </div>
+    </div>
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header_area" id="header">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-12 h-100">
+                    <nav class="h-100 navbar navbar-expand-lg align-items-center">
+                        <a class="navbar-brand" href="index.html">toviso</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#caviarNav" aria-controls="caviarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
+                        <div class="collapse navbar-collapse" id="caviarNav">
+                            <ul class="navbar-nav ml-auto" id="caviarMenu">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#about">About Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" onclick="check()" href="reservation.html">Reservation</a>
+                                </li>
+								<li class="nav-item">
+                                    <a class="nav-link" href="menu.html">Menu</a>
+                                </li>
+								<li class="nav-item">
+                                    <a class="nav-link" href="registration.html">Sign Up</a>
+                                </li>
+								 <li class="nav-item">
+                                    <a class="nav-link" onclick="openlogNav()" href="#login">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" onclick="openConNav()" href="#contact">Contact</a>
+                                </li>
+								<li class="nav-item">
+                                    <a class="nav-link" onclick="openConNav()" href="Comment.html">Comments</a>
+                                </li>
+								<li class="nav-item">
+                                    <a class="nav-link" onclick="openMenuNav()" href="#menu">Specials &#9776;</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ****** Welcome Area Start ****** -->
+    <section class="caviar-hero-area" id="home">
+        <!-- Welcome Social Info -->
+        <div class="welcome-social-info">
+            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        </div>
+        <!-- Welcome Slides -->
+        <div class="caviar-hero-slides owl-carousel">
+            <!-- Single Slides -->
+            <div class="single-hero-slides bg-img" style="background-image: url(img/bg-img/hero-1.jpg);">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-11 col-md-6 col-lg-4">
+                            <div class="hero-content">
+                                <h2>We serve you </h2>
+								<p>06:00 AM to 03:00 AM</p>
+                                <a href="reservation.html" class="btn caviar-btn"><span></span> Reservation</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slider Nav -->
+                <div class="hero-slides-nav bg-img" style="background-image: url(img/bg-img/hero-2.jpg);"></div>
+            </div>
+            <!-- Single Slides -->
+            <div class="single-hero-slides bg-img" style="background-image: url(img/bg-img/hero-2.jpg);">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-11 col-md-6 col-lg-4">
+                            <div class="hero-content">
+                                <h2>Eat. Drink. Lounge. Lenox.</h2>
+                                <p>For great Indo-American food, Think daily</p>
+                                <a href="reservation.html" class="btn caviar-btn"><span></span> Reservation</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slider Nav -->
+                <div class="hero-slides-nav bg-img" style="background-image: url(img/bg-img/hero-1.jpg);"></div>
+            </div>
+        </div>
+    </section>
+    <!-- ****** Welcome Area End ****** -->
+
+    <!-- ****** About Us Area Start ****** -->
+    <section class="caviar-about-us-area section-padding-150" id="about">
+        <div class="container">
+            <!-- About Us Single Area -->
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6">
+                    <div class="about-us-thumbnail wow fadeInUp" data-wow-delay="0.5s">
+                        <img src="img/bg-img/about-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-5 ml-md-auto">
+                    <div class="section-heading">
+                        <h2>About Us</h2>
+                    </div>
+                    <div class="about-us-content">
+                        <span>restaurant style</span>
+                        <p>Hotel toviso is a creative interpretation of the classic Indo-American favourite, offering modern fare with a refined twist. Shareables, great cocktails, tasty local desserts, and fresh pressed juices from Greenhouse Juicery, round out a menu featuring classic diner favourites like burgers, milkshakes, omelettes, and great fries of course. This ingredient focused, neighborhood hot spot, is open from 6 am to 3 am daily, and for brunch on weekends.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ****** About Us Area End ****** -->
+
+    <!-- ****** Dish Menu Area Start ****** -->
+    <section class="caviar-dish-menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 menu-heading">
+                    <div class="section-heading text-center">
+                        <h2>Special</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="caviar-single-dish wow fadeInUp" data-wow-delay="0.5s">
+                        <img src="img/menu-img/dish-1.png" alt="">
+                        <div class="dish-info">
+                            <h6 class="dish-name">Sea Fun</h6>
+                            <p class="dish-price">$39.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="caviar-single-dish wow fadeInUp" data-wow-delay="1s">
+                        <img src="img/menu-img/dish-2.png" alt="">
+                        <div class="dish-info">
+                            <h6 class="dish-name">toviso breakfast</h6>
+                            <p class="dish-price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="caviar-single-dish wow fadeInUp" data-wow-delay="1.5s">
+                        <img src="img/menu-img/dish-3.png" alt="">
+                        <div class="dish-info">
+                            <h6 class="dish-name">Rice Bowl</h6>
+                            <p class="dish-price">$24.99</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ****** Dish Menu Area End ****** -->
+	
+	<!-- ****** Sider Area Start ****** -->
+	<div id="myMenuNav" class="overlay">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeMenuNav()">&times;</a>
+		<div class="overlay-content">
+	
+			<button class="collapsible">BreakFast</button>
+			<div class="content">
+				<div class="d-sm-flex align-items-center">
+                    <div class="dish-thumb">
+                        <img src="img/menu-img/dish-1.png" alt="">
+                    </div>
+					<div class="dish-description">
+                        <h3>Ace's Granola </h3>
+                        <p>greek yogurt, clover honey,fresh berries</p>
+                    </div>
+                    <div class="dish-value">
+                        <h3>$29.99</h3>
+                    </div>
+				</div>
+			</div>
+								
+		</div>
+		<div class="overlay-content">
+	
+			<button class="collapsible">Lunch</button>
+			<div class="content">
+				<div class="d-sm-flex align-items-center">
+                    <div class="dish-thumb">
+                        <img src="img/menu-img/dish-2.png" alt="">
+                    </div>
+					<div class="dish-description">
+                        <h3>Steak & Nachos</h3>
+                        <p>steak, nachos with feta cheese and kalamanta olives</p>
+                    </div>
+                    <div class="dish-value">
+                        <h3>$31.99</h3>
+                    </div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="overlay-content">
+	
+			<button class="collapsible">Dinner</button>
+			<div class="content">
+				<div class="d-sm-flex align-items-center">
+                    <div class="dish-thumb">
+                        <img src="img/menu-img/dish-3.png" alt="">
+                    </div>
+					<div class="dish-description">
+                        <h3>Rice Bowl</h3>
+                        <p>rice cooked with avacado toast and chicken</p>
+                    </div>
+                    <div class="dish-value">
+                        <h3>$39.99</h3>
+                    </div>
+				</div>
+			</div>
+								
+		</div>
+	</div>
+	
+	
+	<div id="mylogNav" class="overlay">
+	<div class="form">
+	<a href="javascript:void(0)" class="closebtn" onclick="closelogNav()">&times;</a>
+	<div class="overlay-content">
+	<div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/hero-4.jpg)">
+			<div class="container h-100">
+				<div class="row h-100 align-items-center">
+					<div class="col-12">
+						<div class="breadcumb-content">
+						
+							<h2>GET IN TOUCH</h2>
+							
+							<p><i class="fa fa-envelope-o" aria-hidden="true"></i><div class="col-12">
+								<input type="text" id="userid" align="center" class="form-control" placeholder="User Name">
+							</div></p>
+							
+							<p><i class="fa fa-map-marker" aria-hidden="true"></i> <div class="col-12">
+								<input type="password" id="pswrd" align="center" class="form-control" placeholder="Password">
+							</div></p>
+							<p><i  aria-hidden="true"></i> <div class="col-12">
+								<button type="submit" onclick="checklog(this.form)" class="btn caviar-btn"><span></span>LOG IN</button>
+							</div></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</form>
+		<!-- ***** Login Area Start ***** -->
+		
+		<!-- ***** Contact Area End ***** -->
+		</div>
+	</div>
+	<!-- ****** Sider Area End ****** -->
+	
+	<div id="myConNav" class="overlay">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeConNav()">&times;</a>
+	<div class="overlay-content">
+		<!-- ***** Breadcumb Area Start ***** -->
+		<div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/hero-4.jpg)">
+			<div class="container h-100">
+				<div class="row h-100 align-items-center">
+					<div class="col-12">
+						<div class="breadcumb-content">
+							<h2>Contact</h2>
+							<p><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:+1234567890">+1 416 822 6927</a> <a href="tel:+1234567890">+1 416 420 4167</a></p>
+							<p><i class="fa fa-map-marker" aria-hidden="true"></i> 100 Marine Drive, Cochin, India</p>
+							<p><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:someone@yoursite.com">hotel_toviso@gmail.com</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ***** Breadcumb Area End ***** -->
+
+		<!-- ***** Contact Area Start ***** -->
+		<div class="caviar-contact-area d-md-flex align-items-center" id="contact">
+			<div class="contact-form-area d-flex justify-content-end">
+				<div class="contact-form">
+					<div class="contact-form-title">
+						<p>get in touch</p>
+					</div>
+					<form action="#">
+						<div class="row">
+							<div class="col-12">
+								<input type="text" class="form-control" placeholder="Your Name">
+							</div>
+							<div class="col-12">
+								<input type="email" class="form-control" placeholder="Your Email">
+							</div>
+							<div class="col-12">
+								<textarea name="message" class="form-control" id="Message" cols="30" rows="10" placeholder="Your Message"></textarea>
+							</div>
+							<div class="col-12">
+								<button type="submit" class="btn caviar-btn"><span></span> Send Message</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="caviar-map-area wow fadeInRightBig" data-wow-delay="0.5s">
+				<div id="googleMap"></div>
+			</div>
+		</div>
+		<!-- ***** Contact Area End ***** -->
+		</div>
+	</div>
+    
+    <!-- ****** Footer Area Start ****** -->
+    <footer class="caviar-footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-text">
+                        <a href="#" class="navbar-brand">hotel | toviso</a>                       
+                        <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | toviso group</p>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+	</form>
+    <!-- ****** Footer Area End ****** -->
+
+    <!-- Jquery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap-4 js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/others/plugins.js"></script>
+    <!-- Active JS -->
+    <script src="js/active.js"></script>
+	
+	<script>
+	var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+function check(form) { 
+                 var a=sessionStorage.user;			 
+            if((a!=undefined))
+			{
+			   
+				window.location="reservation.html";
+			 
+			}
+			else
+			{
+			    window.location="registration.html"; 
+               
+			 }
+                    
+            }
+		function openMenuNav() 
+		{
+			document.getElementById("myMenuNav").style.width = "100%";
+		}
+		
+		function closeMenuNav() 
+		{
+			document.getElementById("myMenuNav").style.width = "0%";
+		}
+		function openConNav() 
+		{
+			document.getElementById("myConNav").style.width = "100%";
+		}
+		
+		function closeConNav() 
+		{
+			document.getElementById("myConNav").style.width = "0%";
+		}
+		function openlogNav() 
+		{
+			document.getElementById("mylogNav").style.width = "100%";
+		}
+		function closelogNav() 
+		{
+			document.getElementById("mylogNav").style.width = "0%";
+		}
+		function checklog(form) 
+		{ /*function to check userid & password*/
+		
+			 var u=localStorage.getItem('username');
+			 var p=localStorage.getItem('Password');
+                /*the following code checkes whether the entered userid and password are matching*/
+                if(form.userid.value == u && form.pswrd.value == p) {
+				sessionStorage.setItem("username", u);
+				    sessionStorage.user =u;
+                    window.location="index.html";/*opens the target page while Id & password matches*/
+                }
+                else {
+                    alert("Error Password or Username")/*displays error message*/
+                }
+            }
+	</script>
+	
+</body>
